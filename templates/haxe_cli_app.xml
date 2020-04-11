@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<scaffolda-template description="Template example">
+<scaffolda-template description="template for cli application">
 
   <direrctory-structure>
+    <dir name="assets"></dir>
     <dir name="dist">
       <dir name="hashlink"></dir>
+      <dir name="windows"></dir>
+      <dir name="neko"></dir>
     </dir>
     <dir name="lib"/>
     <dir name="src">
@@ -26,6 +29,17 @@
       -m Main
       -hl dist/hashlink/app.hl
     </file>  
+    <file name="windows_build.hxml">
+      -cp src
+      -m Main
+      -cpp dist/windows/app
+    </file>
+    <file name="neko_build.hxml">
+      -cp src
+      -m Main
+      -neko dist/neko/app.n
+    </file>
+
   </direrctory-structure>
 
 </scaffolda-template>
